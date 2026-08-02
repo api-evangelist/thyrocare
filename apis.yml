@@ -1,27 +1,87 @@
 aid: thyrocare
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/thyrocare.png
 name: Thyrocare
-description: 'Thyrocare is a company surfaced as a portfolio company of norwest-venture-partners and added
-  to the API Evangelist network as a stub for enrichment. Sector: unknown. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Thyrocare Technologies Limited is an Indian chain of diagnostic and
+  preventive-care laboratories headquartered in Navi Mumbai, founded in 1996.
+  Built around a centralized, highly automated laboratory model, it focuses on
+  affordable preventive health checkups, thyroid and pathology testing, and
+  sells through a nationwide network of DSA (Direct Selling Agent) franchise
+  partners. Norwest Venture Partners invested pre-IPO, and PharmEasy (API
+  Holdings) acquired a majority stake in 2021. Its partner order-booking API
+  (TechSo/BTS) is gated behind the DSA program and publishes no public OpenAPI.
 url: https://raw.githubusercontent.com/api-evangelist/thyrocare/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - norwest-venture-partners
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: partner-gated-api
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-- Unknown
-apis: []
+- Healthcare
+- Diagnostics
+- Laboratory
+- Pathology
+- Preventive Care
+- India
+apis:
+- name: Thyrocare TechSo Partner API (BTS)
+  description: >-
+    Partner order-booking API used by Thyrocare's DSA (Direct Selling Agent)
+    franchise network for booking diagnostic tests and retrieving reports. A
+    Swashbuckle (.NET) Swagger UI is publicly reachable, but its discovery
+    document returns HTTP 500, so no machine-readable spec is retrievable;
+    access requires DSA credentials.
+  humanURL: https://techso.thyrocare.cloud/TechSoAPI/swagger
+  baseURL: https://techso.thyrocare.cloud/TechSoAPI
+  tags:
+  - Diagnostics
+  - Booking
+  - Partners
+  properties:
+  - type: APIReference
+    url: https://techso.thyrocare.cloud/TechSoAPI/swagger
+  - type: Login
+    url: https://techso.thyrocare.cloud/TechSoAPI/Login/Login
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/thyrocare-domain-security.yml
 - type: Website
   url: https://thyrocare.com
+- type: Support
+  url: https://thyrocare.freshdesk.com/support/solutions
+- type: Login
+  url: https://client.thyrocare.com/
+- type: SignUp
+  url: https://lead.thyrocare.com/dsa-affiliate/
+- type: PrivacyPolicy
+  url: https://b2capi.thyrocare.com/privacy_policy.html
+- type: WellKnown
+  url: well-known/thyrocare-well-known.yml
+- type: LLMsTxt
+  url: llms/thyrocare-llms.txt
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 3
+  pass: local-v1

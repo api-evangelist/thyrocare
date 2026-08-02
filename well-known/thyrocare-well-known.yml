@@ -1,0 +1,33 @@
+generated: '2026-07-21'
+method: searched
+source: live probes of thyrocare.com and Thyrocare API hosts
+hosts:
+  - host: https://www.thyrocare.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /llms.txt
+        status: 404
+  - host: https://thyrocare.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+  - host: https://b2capi.thyrocare.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+  - host: https://techso.thyrocare.cloud
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+  - host: https://velso.thyrocare.cloud
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+notes: >-
+  No /.well-known/ discovery surface published on any Thyrocare host probed.
+  www.thyrocare.com serves 403 to non-browser clients (bot protection);
+  well-known paths return 404. No security.txt, OIDC discovery, api-catalog,
+  or ai-plugin manifests found.

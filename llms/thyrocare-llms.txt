@@ -1,0 +1,21 @@
+# Thyrocare
+
+> Thyrocare Technologies Limited is an Indian chain of diagnostic and preventive-care laboratories headquartered in Navi Mumbai, founded in 1996. It operates a centralized, automated laboratory model focused on affordable preventive health checkups and pathology testing, sells through a network of DSA (Direct Selling Agent) franchise partners, and has been majority-owned by PharmEasy (API Holdings) since 2021. Its partner/booking API surface is gated behind the DSA program; no public OpenAPI is published.
+
+## Company
+
+- [Website](https://www.thyrocare.com): Corporate and consumer site (serves 403 to non-browser clients)
+- [B2C portal](https://b2capi.thyrocare.com/): Booking, wellness receipts, and report authenticity portal
+- [DSA affiliate program](https://lead.thyrocare.com/dsa-affiliate/): Partner/affiliate program that grants API access
+- [DSA sign-in](https://client.thyrocare.com/): Direct Selling Agent portal
+- [Support](https://thyrocare.freshdesk.com/support/solutions): Freshdesk help center
+
+## APIs
+
+- [TechSo API (BTS) Swagger UI](https://techso.thyrocare.cloud/TechSoAPI/swagger): Partner order-booking API surface (Swashbuckle/.NET; discovery document currently returns HTTP 500, spec not publicly retrievable)
+- [Velso platform](https://velso.thyrocare.cloud/): API host returning a health-check JSON; endpoints are partner-authenticated
+
+## Notes
+
+- API access requires enrollment in the Thyrocare DSA program (dsa.operations@thyrocare.com).
+- No public OpenAPI/AsyncAPI, SDK packages, official GitHub organization, llms.txt, or /.well-known/ discovery documents were found as of 2026-07-21.
